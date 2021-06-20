@@ -39,13 +39,48 @@ a {
 }
 
 /*Стили хэдэра */
+.logo-style-header {
+  width: 220px;
+  height: 47;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.logo-style-header:active {
+  background-color:var(--special-dark-red);
+}
 
 .booking {
   background-color: var(--basic-green);
 }
+
 .booking:active {
   background-color: var(--basic-green);
   filter: brightness(50%);
+}
+
+.serch {
+  background: var(--basic-eaxtra-dark-blue);
+}
+
+.serch input: hover{
+  background-color: var(--basic-white);
+}
+
+.phone-style {
+  border: 3px;
+  border-color: var(--basic-white);
+  border-style: solid;
+  width: 270px;
+  height: 45px;
+  text-align: center;
 }
 
 .button-login {
@@ -80,28 +115,6 @@ a {
   color: var(--special-grey);
 }
 
-.footer-category a, .footer-contacts a {
-  color: var(--basic-orange);
-}
-
-.logo-style-header {
-  width: 220px;
-  height: 47;
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: center;
-  color: var(--basic-white);
-  text-transform: uppercase;
-  background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-}
-
-.logo-style-header:active {
-  background-color:var(--special-dark-red);
-}
-
 .main-header {
   background-color: var(--basic-light-gary);
   font-family: "Cuprum", Arial, sans-serif;
@@ -116,6 +129,20 @@ a {
 
 .main-header-up a, .site-navigation a, .category a, .main-footer a {
   color: var(--basic-white);
+}
+
+.site-navigation li:hover {
+  background-color: var(--special-dark-blue);
+}
+
+.site-navigation li:active {
+  background-color: var(#1D2739);
+  filter: brightness(50%);
+  box-shadow: inset 0px -5px 0px var(--special-dark-blue);
+}
+
+.footer-category a, .footer-contacts a {
+  color: var(--basic-orange);
 }
 
 .main-header-text {
@@ -134,36 +161,6 @@ a {
 .main-header-addres {
   font-size: 14px;
 }
-.phone-style {
-  border: 3px;
-  border-color: var(--basic-white);
-  border-style: solid;
-  width: 270px;
-  height: 45px;
-  text-align: center;
-}
-
-.serch {
-  background: var(--basic-eaxtra-dark-blue);
-}
-
-.serch input: hover{
-  background-color: var(--basic-white);
-}
-
-
-.site-navigation li:hover {
-  background-color: var(--special-dark-blue);
-}
-
-.site-navigation li:active {
-  background-color: var(#1D2739);
-  filter: brightness(50%);
-  box-shadow: inset 0px -5px 0px var(--special-dark-blue);
-}
-
-
-
 
 .button-cart {
   font: inherit;
@@ -418,7 +415,7 @@ a {
 
 
 
-/*Стиль попапа(модалочки) */
+/*Стиль попапа */
 .popup-feedback {
   width: 620px;
   height: 430px;
@@ -454,7 +451,7 @@ a {
 }
 
 
-/*стили страницы каталога*/
+/**/
 .breadcrumbs {
   list-style: none;
   line-height: 18px;
