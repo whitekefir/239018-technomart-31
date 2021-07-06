@@ -46,13 +46,10 @@
       </nav>
     </header> 
     <main>
-  	  <h1>Каталог</h1>
+  	  <h1 class="hidden-element">Каталог</h1>
       <ul class="breadcrumbs">
         <li>
-          <a href="index.html">Главная</a>
-        </li>
-        <li>
-          <a href="catalog.html">Магазин</a>
+          <a href="catalog.html">Каталог</a>
         </li>
         <li>
           <a href="blank.html">Инструменты</a>
@@ -63,9 +60,9 @@
       </ul>
       <h2 class="tittle-catalog">Перфораторы</h2>
       <section>
-        <h2>Фильтр</h2>
+        <h2 class="filter-style">Фильтр:</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <fieldset class="filter border-bottom">
             <legend>Цена:</legend>
             <ul>
               <li>
@@ -76,7 +73,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter border-bottom">
             <legend>Производители:</legend>
             <ul>
               <li>
@@ -101,28 +98,28 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter">
             <legend>Питание:</legend>
             <ul>
-              <li>
+              <li class="filter-option filter-radio">
                 <input type="radio" name="product-group" value="battery" id="filter-battery" checked>
                 <label for="filter-battery">Аккумуляторные</label>
               </li>
-              <li>
+              <li class="filter-option filter-radio">
                 <input type="radio" name="product-group" value="supply" id="filter-supply">
                 <label for="filter-supply">Сетевые</label>
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button type="submit" class="filter-button">Показать</button>
         </form>
       </section>
-      <section>
-        <h2>Сортировка</h2>
+      <section class="sort-style">
+        <h2 class="hidden-element">Сортировка</h2>
         <ul>
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По функционалу</li>
+          <li class="sort-style-element sort-style-current"><a href="#">По цене</a></li>
+          <li class="sort-style-element"><a href="#">По типу</a></li>
+          <li class="sort-style-element"><a href="#">По функционалу</a></li>
         </ul>
         <ul>
           <li>
@@ -136,7 +133,7 @@
         </ul>
       </section>
       <section>
-        <h2>Товары:</h2>
+        <h2 class="hidden-element">Товары:</h2>
         <ul>
           <li class="product-description">
             <a href="blank.html">
@@ -229,12 +226,12 @@
         </ul>
       </section>
       <section>
-        <ul>
-          <li><a href="blank.html">Предыдущая</a></li>
-          <li><a href="blank.html">1</a></li>
-          <li><a href="blank.html">2</a></li>
-          <li><a href="blank.html">3</a></li>
-          <li><a href="blank.html">Следущая</a></li>
+        <ul class="pagination-list">
+          <li class="pagination-item hidden-element"><a href="blank.html">Предыдущая</a></li>
+          <li class="pagination-item pagination-item-current"><a href="blank.html">1</a></li>
+          <li class="pagination-item"><a href="blank.html">2</a></li>
+          <li class="pagination-item"><a href="blank.html">3</a></li>
+          <li class="pagination-item"><a href="blank.html">Следущая</a></li>
         </ul>
       </section>
       <section class="catalog-about">
