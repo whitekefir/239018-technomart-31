@@ -564,6 +564,8 @@ a {
   background-color: var(--basic-pink-beige);
   border: none;
   text-align: center;
+  font-size: 17px;
+  line-height: 18px;
 } 
 
 .filter-button {
