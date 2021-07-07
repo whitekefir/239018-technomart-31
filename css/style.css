@@ -23,8 +23,8 @@
   --special-dark-blue: #293449;
 }
 
-body {
-  width: 1200px;
+.page-body {
+  min-width: 960px;
   margin: 0px;
   padding: 0px;
   font-family: "PT Sans Narrow", Arial, sans-serif;
@@ -33,6 +33,11 @@ body {
   font-weight: 400;
   color: var(--basic-black);
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -120,12 +125,23 @@ a {
   background-color: var(--basic-light-gary);
   font-family: "Cuprum", Arial, sans-serif;
   color: var(--basic-dark-blue);
+  display: grid;
 }
 
 .main-header-up {
   font-size: 18px;
   color: var(--basic-white);
   background-color: var(--basic-eaxtra-dark-blue);
+  display: grid;
+  grid-auto-columns: min-content 1fr;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header-up-bar {
+  background-color: var(--basic-eaxtra-dark-blue);
+  margin-bottom: 40px;
 }
 
 .main-header-up a, .site-navigation a, .category a, .main-footer a {
@@ -197,10 +213,19 @@ a {
   font-size: 18px;
   list-style: none;
   text-align: center;
+  /*margin-bottom: 40px;*/
+  margin: 0 0 40px 0;
+  padding: 0;
 }
 
 .site-navigation li {
   box-shadow: inset 0px -5px 0px var(--special-dark-blue);
+}
+
+.button-acc {
+  justify-self: end;
+  max-width: 300px;
+  outline: 5px solid red;
 }
 
 /*Стили основной части */
@@ -212,7 +237,7 @@ a {
   font-weight: 700;
 }
 .category {
-
+  max-width: 300px;
 }
 
 .category p {
@@ -303,11 +328,12 @@ a {
   font-style: normal;
   text-transform: uppercase;
   font-weight: bold;
-
 }
 
 .pop-produse-style {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .pop-produse-style-img:active {
@@ -368,8 +394,6 @@ a {
   background-color: var(--basic-white);
 }
 
-
-
 /* стили футера   */
 .logo-style-footer {
   width: 220px;
@@ -400,6 +424,7 @@ a {
   color: var(--basic-white);
   background: var(--basic-eaxtra-dark-blue);
 }
+
 .main-footer li:hover, .footer-contacts a:hover {
   text-decoration: underline;
 }
@@ -412,8 +437,20 @@ a {
 .footer-contacts a:active {
   color: var(--special-red);
   text-decoration:none;
+  
+}
+.content-contacts {
+  justify-self: end;
+}
+.footer-social {
+  justify-self: center;
 }
 
+.footer-contacts {
+
+  justify-self: end;
+  outline: 5px solid red;
+}
 
 
 /*Стиль попапа */
@@ -452,6 +489,7 @@ a {
 }
 
 
+
 /* стили каталога */
 .breadcrumbs {
   list-style: none;
@@ -473,11 +511,9 @@ a {
   background-color: var(--basic-light-gary);
 }
 
-
-
 .catalog-about {
   background-color: var(--basic-light-gary);
-  /*font-family: PT Sans;*/
+  font-family: "PT Sans Narrow", Arial, sans-serif;;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -496,7 +532,7 @@ a {
 
 .filter-style {
   background-color: var(--basic-pink-beige) ;
- /*font-family: PT Sans;*/
+ font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-style: normal;
@@ -505,7 +541,7 @@ a {
 
 .sort-style {
   background-color: var(--basic-pink-beige) ;
- /*font-family: PT Sans;*/
+ font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-style: normal;
@@ -526,7 +562,6 @@ a {
 
 .sort-style-element a:active {
   color: var(--basic-black);
-  
 }
 
 .sort-style-element a {
@@ -535,6 +570,7 @@ a {
   opacity: 0.3;
   border-bottom: 1px dashed var(--basic-red);
 }
+
 .sort-style-current a {
   color: var(--basic-red);
   border-bottom: none;
@@ -543,8 +579,8 @@ a {
 
 .filter {
   border: none;
-
 }
+
 .filter li {
   list-style: none;
   text-transform: uppercase;
@@ -554,12 +590,14 @@ a {
 }
 
 .filter legend {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .filter input {
   background-color: var(--basic-pink-beige);
   border: none;
@@ -580,6 +618,7 @@ a {
   background-color: var(--basic-white);
   border: 1px solid #E5E5E5;
 }
+
 .filter-checkbox {}
 .filter-option {}
 .filter-radio {}
@@ -589,7 +628,7 @@ a {
 }
 
 .pagination-item a {
-  font-family: PT Sans;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
@@ -600,8 +639,6 @@ a {
 .pagination-list {
   list-style: none;
 }
-
-
 
 .pagination-item-current a, .pagination-item a:hover {
   background-color: var(--basic-white);
@@ -616,9 +653,65 @@ a {
 .pagination-item-current a:active, .pagination-item a:active {
   border: 1px solid var(--basic-red);
 }
+
 .pagination-item-current a {
   background-color: var(--basic-red);
   color: var(--basic-white);
   border: 1px solid var(--basic-red);
   border-radius: 2px;
 }
+.good-block {
+  margin: 0;
+  padding: 0;
+}
+
+.good-block li {
+  border: 1px solid #EAEAEA;
+  box-sizing: border-box;
+}
+
+/*гриды*/
+
+.page {
+  height: 100%;
+}
+
+.center {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px; 
+}
+
+.index-columns-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 70px;
+}
+
+.index-columns-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+}
+
+.good-block .index-columns-4 {
+  gap: 20px;
+}
+
+.index-columns-3 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.index-rows-2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+
+}
+
