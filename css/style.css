@@ -200,6 +200,7 @@ a {
   text-transform: uppercase;
   background-color: var(--basic-red);
 }
+
 .false-button:hover {
   background-color: var(--special-red);
 }
@@ -236,6 +237,7 @@ a {
   color: var(--basic-white);
   font-weight: 700;
 }
+
 .category {
   max-width: 300px;
 }
@@ -442,6 +444,7 @@ a {
 .content-contacts {
   justify-self: end;
 }
+
 .footer-social {
   justify-self: center;
 }
@@ -618,10 +621,6 @@ a {
   background-color: var(--basic-white);
   border: 1px solid #E5E5E5;
 }
-
-.filter-checkbox {}
-.filter-option {}
-.filter-radio {}
 
 .border-bottom {
   border-bottom: 1px solid #E5E5E5;
