@@ -132,8 +132,8 @@ a {
   font-size: 18px;
   color: var(--basic-white);
   background-color: var(--basic-eaxtra-dark-blue);
-  display: grid;
-  grid-auto-columns: min-content 1fr;
+  display: flex;
+  justify-content: space-between;
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
@@ -162,10 +162,26 @@ a {
   color: var(--basic-orange);
 }
 
+.footer-category{
+  display: flex;
+  flex-direction: row;
+  max-width: 540px;
+  justify-self: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-category li {
+  padding: 0 29px 0 29px;
+}
+
 .main-header-text {
   font-size: 16px;
   font-style: italic;
   color: var(--basic-red);
+  width: 200px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-header-phone {
@@ -199,6 +215,20 @@ a {
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: var(--basic-red);
+  margin: 0;
+  padding: 0;
+}
+
+.size-24-24 {
+  padding: 11px 24px 9px 24px;
+}
+
+.size-39-38 {
+  padding: 11px 39px 9px 38px;
+}
+
+.size-61-61 {
+  padding: 11px 61px 9px 61px;
 }
 
 .false-button:hover {
@@ -215,31 +245,66 @@ a {
   list-style: none;
   text-align: center;
   /*margin-bottom: 40px;*/
-  margin: 0 0 40px 0;
+  margin: 0 0 60px 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 940px;
 }
 
 .site-navigation li {
   box-shadow: inset 0px -5px 0px var(--special-dark-blue);
+  padding: 16px 28px 20px 28px;
+}
+
+.site-navigation li:first-child{
+  padding-left: 53px;
+}
+
+.site-navigation li:last-child {
+  padding-right: 53px;
 }
 
 .button-acc {
   justify-self: end;
   max-width: 300px;
-  outline: 5px solid red;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 /*Стили основной части */
+.slider {
+  margin: 59px 0 59px 0;
+}
+
+.pop-good {
+  margin-bottom: 70px;
+}
+
 .category h3{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
   font-weight: 700;
+  margin: 0;
+  padding: 0;
 }
 
 .category {
   max-width: 300px;
+}
+
+.category-position {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 123px;
 }
 
 .category p {
@@ -258,7 +323,15 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
   mix-blend-mode: normal;
   width: 135px;
-  height: 38px;
+}
+
+.category-text-area  p {
+  line-height: 38px;
+}
+
+.category-slider {
+  grid-column: -1/ 2;
+  grid-row: 2 / 4;
 }
 
 .category-text-area:hover {
@@ -304,10 +377,15 @@ a {
 
 .title-background {
   background-color: var(--basic-beige);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .position-right {
   text-align: right;
+  margin-right: 14px;
 }
 
 .product-description {
@@ -355,6 +433,8 @@ a {
   line-height: 30px;
   color: var(--basic-dark-blue);
   text-transform: uppercase;
+  margin: 29px;
+  padding: 0;
 }
 
 .text-balck {
@@ -367,10 +447,27 @@ a {
 
 .service {
   background-color: var(--basic-light-gary);
+  margin: 0;
+  padding: 0;
+}
+
+.service ul,  .service li{
+  margin: 0;
+  padding: 0;
+}
+
+.service h2 {
+  padding-top: 64px;
+  margin: 0;
 }
 
 .service ul,.main-footer ul, .main-footer-down ul {
   list-style: none;
+}
+
+.service-text{
+ padding: 0;
+ margin: 25px 0 75px 0;
 }
 
 .servic-option {
@@ -386,6 +483,11 @@ a {
   background-color: var(--basic-dark-blue);
 }
 
+.service-item li {
+  width: 240px;
+  padding: 13px 0 17px 22px;
+}
+
 .service-item li:hover {
   color: var(--basic-white);
   background-color: var(--basic-eaxtra-dark-blue);
@@ -395,6 +497,51 @@ a {
   color: var(--basic-dark-blue);
   background-color: var(--basic-white);
 }
+
+.service-about {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-block {
+  width: 640px;
+  margin-left: 80px;
+}
+.service-block li{
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-block-delivery {
+  background-image: url("../img/icons/option-credit.png");
+  background-color: inherit;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.service-block-quarantee {
+  background-image: url("../img/icons/option-quarantee.png");
+  background-color: inherit;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.service-block-credit {
+  background-image: url("../img/icons/option-deliveri.png");
+  background-color: inherit;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.service-block-text {
+  width: 350px;
+}
+
+.service-block-text h3 {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
 
 /* стили футера   */
 .logo-style-footer {
@@ -447,14 +594,68 @@ a {
 
 .footer-social {
   justify-self: center;
+  max-width: 224px;
 }
+
+.footer-social ul {
+ display: flex;
+flex-direction: row;
+}
+
 
 .footer-contacts {
-
   justify-self: end;
-  outline: 5px solid red;
+  display: flex;
+  max-width: 300px;
+
+}
+.footer-contacts p {
+  margin-left: 51px;
 }
 
+.footer-contacts p:last-child {
+  margin-left: 10px;
+}
+
+.footer-up-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0;
+  padding: 0;
+  align-items: flex-end;
+}
+
+ .footer-menu li {
+ padding: 0 58px 0 0;
+ padding-top: 0;
+ margin-top: 0;
+}
+ .footer-menu li:last-child {
+ padding-right: 10px;
+}
+
+.footer-down-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 51px 0;
+  padding: 0;
+  align-items: baseline;
+}
+
+.footer-down-wrapper-address {
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
 
 /*Стиль попапа */
 .popup-feedback {
@@ -692,15 +893,16 @@ a {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 0;
   padding: 0;
+   gap: 20px;
 }
 
 .good-block .index-columns-4 {
-  gap: 20px;
+ 
 }
 
 .index-columns-3 {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 0;
   padding: 0;
   gap: 20px;
@@ -708,7 +910,7 @@ a {
 
 .index-rows-2 {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: min-content min-content;
   margin: 0;
   padding: 0;
 
